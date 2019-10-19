@@ -19,4 +19,6 @@ RUN python3 /usr/share/libvcx/provision_agent_keys.py "https://eas01.pps.evernym
 # https://static.pps.evernym.com/diffusion2019/python3-vcx-wrapper_0.2.41140129.tar.gz
 # https://static.pps.evernym.com/diffusion2019/node-vcx-wrapper_0.2.41140129-e0d1c6e_amd64.tgz
 
+WORKDIR /app
+
 ENTRYPOINT ["/bin/bash"]

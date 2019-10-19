@@ -3,7 +3,10 @@ version: '3'
 services:
 
   libvcx:
+    user: "${_UIDGUID}"
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      - ".:/app"
 
