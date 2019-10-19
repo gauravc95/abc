@@ -17,7 +17,7 @@ theme: black
 
 ![](https://bloghubstaffcom.lightningbasecdn.com/wp-content/uploads/2018/04/ZfEJ6xdDSUQqvMQMl-ttinkviHR5F7ac0kvYRDBhhkrV8ZS8BimK5Ak2NVi1m0m9U2vX1abEoQk2kp3fomT-Yp_LSHmRs6M8rZ9eLWxuOq-iCXRqpI6ZA-3XZpYSMAppf7pWT811.png)
 
-Source: https://blog.hubstaff.com/employee-onboarding-best-practices/
+Source: [](https://blog.hubstaff.com/employee-onboarding-best-practices/)
 
 ---
 
@@ -25,7 +25,7 @@ Source: https://blog.hubstaff.com/employee-onboarding-best-practices/
 > minutes of starting with the company.
 
 
-Source: https://blog.hubstaff.com/employee-onboarding-best-practices/
+Source: [](https://blog.hubstaff.com/employee-onboarding-best-practices/)
 
 ## How to do it?
 
@@ -41,7 +41,7 @@ Source: https://blog.hubstaff.com/employee-onboarding-best-practices/
 > The relationship is often less fraught, less hierarchical, and doesn’t
 > come with the same expectations.
 
-Source: https://hbr.org/2015/08/7-tips-for-managing-freelancers-and-independent-contractors
+Source: [](https://hbr.org/2015/08/7-tips-for-managing-freelancers-and-independent-contractors)
 
 # Forms, forms, forms
 
