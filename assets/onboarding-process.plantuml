@@ -1,0 +1,34 @@
+@startuml
+actor "Employee" as a_ex_employee
+actor "External Contractor" as a_ex
+actor "Project Manager" as a_company_pm
+actor "HR" as a_company_hr
+actor "IT" as a_company_it
+actor "Customer" as a_customer
+
+a_customer -> a_company_pm: Order a new project
+a_company_pm -> a_ex: We need support
+a_ex -> a_ex_employee: You work for them
+a_ex_employee -> a_company_pm: I want to work for you
+
+group Onboarding
+    a_company_pm -> a_company_hr: Please sign-off the onboarding
+    a_company_pm -> a_company_it: Please create an account
+    a_company_hr -> a_company_pm: Okay
+    a_company_it -> a_company_pm: Okay
+end
+
+a_company_pm -> a_ex_employee: You can start working for us
+a_ex_employee -> a_ex_employee: Work
+a_ex_employee -> a_company_pm: Finished
+
+group Offboarding
+    a_company_pm -> a_company_hr: Unregister contractor
+    a_company_pm -> a_company_it: Unregister contractor
+end
+
+group On-/Offboarding repeated for the next project
+    a_company_pm -> a_company_hr: ...
+end
+
+@enduml
