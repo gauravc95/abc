@@ -2,6 +2,14 @@
 
 _Team-38_
 
+## Installation
+
+1. Install `docker-compose`
+2. Enter `src` directory
+3. Run `docker-compose build` to create the docker image that contains
+   the application
+4. Run `./start.sh` to start the application
+
 ## Schema
 
 - [`familyName`](https://schema.org/familyName)
