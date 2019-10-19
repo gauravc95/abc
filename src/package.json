@@ -1,0 +1,9 @@
+{
+  "name": "hrtrust",
+  "version": "0.0.1",
+  "description": "I trust you verifing her accessing my enterprise IT services",
+  "main": "index.js",
+  "repository": "https://github.com/diffusioncon/Team-38",
+  "author": "multiple",
+  "license": "Apache 2.0"
+}
