@@ -6,7 +6,6 @@ _Team-38_
 
 - [`familyName`](https://schema.org/familyName)
 - [`givenName`](https://schema.org/givenName)
-- [`employee`](https://schema.org/employee)
 - `managesAccessToService`
 - `hasAccessToService`
 
