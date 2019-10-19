@@ -11,6 +11,7 @@ RUN apt-get install -y libindy=1.8.2 libsovtoken=0.9.7 libvcx=0.2.3
 RUN curl -L -o /tmp/libvcx_0.2.41140129-e0d1c6e_amd64.deb https://static.pps.evernym.com/diffusion2019/libvcx_0.2.41140129-e0d1c6e_amd64.deb
 RUN dpkg -i /tmp/libvcx_0.2.41140129-e0d1c6e_amd64.deb
 RUN rm /tmp/libvcx_0.2.41140129-e0d1c6e_amd64.deb
+
 RUN apt-get install -y jq
 RUN mkdir /indy
 # Details see https://static.pps.evernym.com/diffusion2019/install-and-provision-libvcx-1.8.2.pdf
@@ -18,6 +19,13 @@ RUN python3 /usr/share/libvcx/provision_agent_keys.py "https://eas01.pps.evernym
 
 # https://static.pps.evernym.com/diffusion2019/python3-vcx-wrapper_0.2.41140129.tar.gz
 # https://static.pps.evernym.com/diffusion2019/node-vcx-wrapper_0.2.41140129-e0d1c6e_amd64.tgz
+
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+RUN apt-get update
+RUN apt-get install -y nodejs
+
+RUN apt-get install -y build-essentials
 
 WORKDIR /app
 
