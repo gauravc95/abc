@@ -4,7 +4,11 @@ _Team-38_
 
 ## Schema
 
-- 
+- [`familyName`](https://schema.org/familyName)
+- [`givenName`](https://schema.org/givenName)
+- [`employee`](https://schema.org/employee)
+- `managesAccessToService`
+- `hasAccessToService`
 
 ## Verity
 
