@@ -58,7 +58,7 @@ async function issueCredential(connection) {
   var serializedCredDef = {
     version: "1.0",
     data: {
-      id: "RQGxEnKLN6HRMsUpdMNHjm:3:CL:75818:tag1",
+      id: "RQGxEnKLN6HRMsUpdMNHjm:3:CL:75837:tag1",
       tag: "tag1",
       name: "CreditRatingCredDef",
       source_id: "CreditRatingCredDef",

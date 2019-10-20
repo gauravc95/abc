@@ -12,7 +12,7 @@ async function run() {
     data: {
       attrNames: ["First name", "Last name", "Date of birth", "Credit rating"],
       name: "CreditRating",
-      version: "1.0.1"
+      version: "1.0.3"
     },
     paymentHandle: 0,
     sourceId: "CreditRatingSchema"
