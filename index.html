@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Credentials issuance page</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css'><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="page">
+  <div class="page__container uk-container uk-container-small">
+    <div class="page__centered">
+      <div id="qrcode" class="qrcode"></div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.js'></script>
+	<script src='https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js'></script>
+	<script type="text/javascript">
+		var qrcode = new QRCode("qrcode");
+		qrcode.makeCode("some text");
+	</script>
+</body>
+</html>
