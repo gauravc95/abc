@@ -26,7 +26,7 @@ RUN apt-get update
 RUN apt-get install -y nodejs
 RUN npm install --global yarn
 
-RUN apt-get install -y build-essentials
+RUN apt-get install -y build-essential
 
 WORKDIR /app
 
