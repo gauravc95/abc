@@ -55,23 +55,22 @@ async function waitForAcceptance(connection) {
 }
 
 async function issueCredential(connection) {
-  var serializedCredDef = {
-    version: "1.0",
-    data: {
-      id: "RQGxEnKLN6HRMsUpdMNHjm:3:CL:75837:tag1",
-      tag: "tag1",
-      name: "CreditRatingCredDef",
-      source_id: "CreditRatingCredDef",
-      issuer_did: "RQGxEnKLN6HRMsUpdMNHjm",
-      cred_def_payment_txn: null,
-      rev_reg_def_payment_txn: null,
-      rev_reg_delta_payment_txn: null,
-      rev_reg_id: null,
-      rev_reg_def: null,
-      rev_reg_entry: null,
-      tails_file: "tails.txt"
-    }
-  };
+  var serializedCredDef = { version: '1.0',
+  data: 
+   { id: 'RQGxEnKLN6HRMsUpdMNHjm:3:CL:75844:tag1',
+     tag: 'tag1',
+     name: 'CreditRatingCredDef',
+     source_id: 'CreditRatingCredDef',
+     issuer_did: 'RQGxEnKLN6HRMsUpdMNHjm',
+     cred_def_payment_txn: null,
+     rev_reg_def_payment_txn: null,
+     rev_reg_delta_payment_txn: null,
+     rev_reg_id: null,
+     rev_reg_def: null,
+     rev_reg_entry: null,
+     tails_file: 'tails.txt' } }
+     
+  
   var credDef = await CredentialDef.deserialize(serializedCredDef);
   var credDefHandle = credDef.handle;
 
