@@ -27,7 +27,6 @@ function sleep(ms) {
 
 async function createConnection() {
   // returns {connection: object, qrcode: string}
-  await init();
   const connectionToHolder = await Connection.create({ id: "Holder" });
   await connectionToHolder.connect('{"use_public_did": true}');
   await connectionToHolder.updateState();
@@ -117,6 +116,48 @@ async function issueCredential(connection) {
   return credential;
 }
 
+async function requestAndVerifyCredential(connection) {
+  // returns {proof: object, state: boolean}
+  const proofAttributes = [
+    { name: "First name" },
+    { name: "Last name" },
+    { name: "Date of birth" },
+    { name: "Credit rating" }
+  ];
+
+  console.log("Create a Proof object");
+  const proof = await Proof.create({
+    sourceId: "213",
+    attrs: proofAttributes,
+    name: "proofForHolder",
+    revocationInterval: {}
+  });
+
+  console.log("Request proof of the credit rating from the holder");
+  await proof.requestProof(connection);
+
+  console.log("Poll the agency and wait for the holder to provide a proof");
+  let proofState = await proof.getState();
+  while (proofState !== StateType.Accepted) {
+    sleep(2000);
+    await proof.updateState();
+    proofState = await proof.getState();
+  }
+
+  console.log("Process the proof provided by the holder");
+  let proof_data = await proof.getProof(connection);
+  console.log("Proof object: ", JSON.stringify(proof_data, null, 4));
+  let valid = proof_data.proofState;
+  if (valid === ProofState.Verified) {
+    console.log("Proof is verified");
+  } else {
+    console.log("Could not verify proof");
+  }
+  return { proof: proof_data, state: valid === ProofState.Verified };
+}
+
+exports.init = init;
 exports.createConnection = createConnection;
 exports.waitForAcceptance = waitForAcceptance;
 exports.issueCredential = issueCredential;
+exports.requestAndVerifyCredential = requestAndVerifyCredential;
