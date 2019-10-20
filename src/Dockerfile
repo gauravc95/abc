@@ -24,6 +24,7 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN apt-get update
 RUN apt-get install -y nodejs
+RUN npm install --global yarn
 
 RUN apt-get install -y build-essentials
 
