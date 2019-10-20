@@ -6,9 +6,17 @@ _Team-38_
 
 1. Install `docker-compose`
 2. Enter `src` directory
-3. Run `docker-compose build` to create the docker image that contains
-   the application
-4. Run `./start.sh` to start the application
+3. Run `./build.sh` to create the docker image that contains the
+   application
+
+## Usage
+
+- Run `./start.sh` to start the application
+
+## Development
+
+- Run `./start-dev.sh` to start the application as a developer and be
+  dropped into a shell
 
 ## Schema
 
