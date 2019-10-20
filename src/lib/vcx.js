@@ -16,6 +16,7 @@ const {
   Connection,
   IssuerCredential,
   Proof,
+  ProofState,
   StateType,
   Error,
   rustAPI
