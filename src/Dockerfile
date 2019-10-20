@@ -31,4 +31,4 @@ RUN apt-get install -y build-essential
 
 WORKDIR /app
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["node run start"]
