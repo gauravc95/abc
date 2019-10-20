@@ -16,6 +16,7 @@ RUN apt-get install -y jq
 RUN mkdir /indy
 # Details see https://static.pps.evernym.com/diffusion2019/install-and-provision-libvcx-1.8.2.pdf
 RUN python3 /usr/share/libvcx/provision_agent_keys.py "https://eas01.pps.evernym.com" 12345 --enterprise-seed EJ7ohtaiti3aixeitaefo4aeyah7Ieso | jq '.genesis_path="/indy/genesis.txn"|.institution_logo_url="http://example.org/hrtrust.png"|.institution_name="HRTrust"|.payment_method="sov"' > /indy/vcx-config.json
+RUN curl -L https://raw.githubusercontent.com/sovrin-foundation/sovrin/stable/sovrin/pool_transactions_sandbox_genesis -o /indy/genesis.txn
 
 # https://static.pps.evernym.com/diffusion2019/python3-vcx-wrapper_0.2.41140129.tar.gz
 # https://static.pps.evernym.com/diffusion2019/node-vcx-wrapper_0.2.41140129-e0d1c6e_amd64.tgz
